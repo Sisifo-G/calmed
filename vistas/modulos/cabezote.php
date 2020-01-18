@@ -139,19 +139,19 @@
 
                 if($_SESSION["foto"] != ""){
 
-                    echo '<img src="'.$_SESSION["foto"].'" user-img-radious-style>';
+                    echo '<img src="'.$_SESSION["foto"].'" class="user-img-radious-style">';
 
                 }else{
 
 
-                    echo '<img src="vistas/img/usuarios/default/anonymous.png" class="user-image">';
+                    echo '<img src="vistas/img/usuarios/default/anonymous.png" class="user-img-radious-style">';
 
                 }
 
 
             ?>
             <!-- <img alt="image" src="vistas/assets/img/user.png" class="user-img-radious-style"> -->
-            <span class="d-sm-none d-lg-inline-block"><?php  echo $_SESSION["nombre"]; ?></span>
+            
         </a>
         <div class="dropdown-menu dropdown-menu-right pullDown">
             <div class="dropdown-title">Hola <?php  echo $_SESSION["nombre"]; ?></div>
