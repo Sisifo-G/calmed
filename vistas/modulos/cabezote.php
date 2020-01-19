@@ -2,19 +2,14 @@
 <nav class="navbar navbar-expand-lg main-navbar sticky">
 <div class="form-inline mr-auto">
     <ul class="navbar-nav mr-3">
-    <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
-                            collapse-btn"> <i class="fas fa-align-justify"></i></a></li>
-    <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
-    <i class="fas fa-expand"></i>
-        </a></li>
-    <li>
+    
         <form class="form-inline mr-auto">
-        <div class="search-element">
-            <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" data-width="200">
-            <button class="btn" type="submit">
-            <i class="fas fa-search"></i>
-            </button>
-        </div>
+            <div class="search-element">
+                <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" data-width="200">
+                <button class="btn" type="submit">
+                <i class="fas fa-search"></i>
+                </button>
+            </div>
         </form>
     </li>
     </ul>
@@ -134,6 +129,8 @@
     Menù Perfil de Usuario
     ==================================================================== -->
     <li class="dropdown">
+
+        
         <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
             <?php
 

@@ -4,12 +4,19 @@
         <div class="section-body">
         
             <!-- Breadcrumb -->
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="inicio"><i class="fas fa-desktop"></i>Inicio</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Gestión de usuarios</li>
-                </ol>
-            </nav>
+            
+                    <div class="text-center"><h3>Gestión de usuarios</h3></div>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="inicio"><i class="fas fa-desktop"></i>Inicio</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Gestión de usuarios</li>
+                        </ol>
+                        
+                    </nav>
+                    
+                
+            
+            
 
 
             <!-- =================================================

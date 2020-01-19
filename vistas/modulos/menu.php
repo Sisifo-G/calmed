@@ -9,7 +9,7 @@
     </div>
     <ul class="sidebar-menu">
     <li class="menu-header">Principal</li>
-    <li class="dropdown active">
+    <li class="dropdown">
         <a href="inicio" class="nav-link"><i class="fas fa-desktop"></i><span>Panel de Inicio</span></a>
     </li>
     <li class="menu-header">Gestión de usuarios</li>
