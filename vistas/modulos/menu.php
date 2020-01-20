@@ -18,7 +18,7 @@
     <li class="menu-header">Varios</li>
 
     <li class="dropdown">
-        <a href="correo" class="menu-toggle nav-link has-dropdown"><i class="fas fa-box-open"></i><span>Productos</span></a>
+        <a href="correo" class="menu-toggle nav-link has-dropdown"><i class="fas fa-boxes"></i><span>Stock</span></a>
         <ul class="dropdown-menu">
         <li><a class="nav-link" href="categorias">Categorías</a></li>
         <li><a class="nav-link" href="productos">Productos</a></li>

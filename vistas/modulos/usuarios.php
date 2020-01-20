@@ -63,55 +63,55 @@
 
                             <?php
 
-                            $item = null;
-                            $valor = null;
+                                $item = null;
+                                $valor = null;
 
-                            $usuarios = ControladorUsuarios::ctrMostrarUsuarios($item, $valor);
+                                $usuarios = ControladorUsuarios::ctrMostrarUsuarios($item, $valor);
 
-                        foreach ($usuarios as $key => $value){
-                            
-                            echo ' <tr>
-                                    <td>1</td>
-                                    <td>'.$value["nombre"].'</td>
-                                    <td>'.$value["usuario"].'</td>';
+                                foreach ($usuarios as $key => $value){
+                                
+                                echo ' <tr>
+                                        <td>'.($key+1).'</td>
+                                        <td>'.$value["nombre"].'</td>
+                                        <td>'.$value["usuario"].'</td>';
 
-                                    if($value["foto"] != ""){
+                                        if($value["foto"] != ""){
 
-                                        echo '<td><img src="'.$value["foto"].'" class="" width="40px"></td>';
+                                            echo '<td><img src="'.$value["foto"].'" class="img-thumbnail" width="40px"></td>';
 
-                                    }else{
+                                        }else{
 
-                                        echo '<td><img src="vistas/img/usuarios/default/anonymous.png" class="" width="40px"></td>';
+                                            echo '<td><img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail" width="40px"></td>';
 
-                                    }
+                                        }
 
-                                    echo '<td>'.$value["perfil"].'</td>';
+                                        echo '<td>'.$value["perfil"].'</td>';
 
-                                    if($value["estado"] != 0){
+                                        if($value["estado"] != 0){
 
-                                        echo '<td><button class="btn btn-success btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="0">Activado</button></td>';
+                                            echo '<td><button class="btn btn-success btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="0">Activado</button></td>';
 
-                                    }else{
+                                        }else{
 
-                                        echo '<td><button class="btn btn-danger btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="1">Desactivado</button></td>';
+                                            echo '<td><button class="btn btn-danger btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="1">Desactivado</button></td>';
 
-                                    }             
+                                        }             
 
-                                    echo '<td>'.$value["ultimo_login"].'</td>
-                                    <td>
+                                        echo '<td>'.$value["ultimo_login"].'</td>
+                                        <td>
 
-                                        <div class="btn-group">
-                                            
-                                        <button class="btn btn-warning btnEditarUsuario" idUsuario="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarUsuario"><i class="fas fa-pencil-alt"></i></button>
+                                            <div class="btn-group">
+                                                
+                                            <button class="btn btn-warning btnEditarUsuario" idUsuario="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarUsuario"><i class="fas fa-pencil-alt"></i></button>
 
-                                        <button class="btn btn-danger btnEliminarUsuario" idUsuario="'.$value["id"].'" fotoUsuario="'.$value["foto"].'" usuario="'.$value["usuario"].'"><i class="fas fa-trash-alt"></i></button>
+                                            <button class="btn btn-danger btnEliminarUsuario" idUsuario="'.$value["id"].'" fotoUsuario="'.$value["foto"].'" usuario="'.$value["usuario"].'"><i class="fa fa-times"></i></button>
 
-                                        </div>  
+                                            </div>  
 
-                                    </td>
+                                        </td>
 
-                                    </tr>';
-                            }
+                                        </tr>';
+                                }
 
 
                             ?> 
