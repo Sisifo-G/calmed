@@ -35,9 +35,21 @@
   <script src="vistas/assets/js/scripts.js"></script>
   <!-- Custom JS File -->
   <script src="vistas/assets/js/custom.js"></script>
-  <script src="vistas/assets/bundles/sweetalert/sweetalert.min.js"></script>
-  <!-- Page Specific JS File -->
-  <script src="vistas/assets/js/page/sweetalert.js"></script>
+   <!-- SweetAlert 2 -->
+  <script src="vistas/plugins/sweetalert2/sweetalert2.all.js"></script>
+   <!-- By default SweetAlert2 doesn't support IE. To enable IE 11 support, include Promise polyfill:-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+
+ <!-- iCheck 1.0.1 -->
+  <script src="vistas/plugins/iCheck/icheck.min.js"></script>
+
+  <!-- InputMask -->
+  <script src="vistas/plugins/input-mask/jquery.inputmask.js"></script>
+  <script src="vistas/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+  <script src="vistas/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+
+  <!-- jQuery Number -->
+  <script src="vistas/plugins/jqueryNumber/jquerynumber.min.js"></script>
   
 
   
@@ -103,6 +115,12 @@
   
   <script src="vistas/js/plantilla.js"></script>
   <script src="vistas/js/usuarios.js"></script>
+
+  <script src="vistas/js/categorias.js"></script>
+  <script src="vistas/js/productos.js"></script>
+  <script src="vistas/js/clientes.js"></script>
+  <script src="vistas/js/ventas.js"></script>
+  <script src="vistas/js/reportes.js"></script>
 
 </body>
 

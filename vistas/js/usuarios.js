@@ -1,3 +1,5 @@
+
+
 /*=============================================
 SUBIENDO LA FOTO DEL USUARIO
 =============================================*/
@@ -78,7 +80,11 @@ $(".tablas").on("click", ".btnEditarUsuario", function(){
 
 			if(respuesta["foto"] != ""){
 
-				$(".previsualizar").attr("src", respuesta["foto"]);
+				$(".previsualizarEditar").attr("src", respuesta["foto"]);
+
+			}else{
+
+				$(".previsualizarEditar").attr("src", "vistas/img/usuarios/default/anonymous.png");
 
 			}
 
@@ -110,23 +116,23 @@ $(".tablas").on("click", ".btnActivar", function(){
       processData: false,
       success: function(respuesta){
 
-      	if(window.matchMedia("(max-width:767px)").matches){
+      		if(window.matchMedia("(max-width:767px)").matches){
 
-      		 swal({
-		      title: "El usuario ha sido actualizado",
-		      type: "success",
-		      confirmButtonText: "¡Cerrar!"
-		    }).then(function(result) {
-		        if (result.value) {
+	      		 swal({
+			      title: "El usuario ha sido actualizado",
+			      type: "success",
+			      confirmButtonText: "¡Cerrar!"
+			    }).then(function(result) {
+			        if (result.value) {
 
-		        	window.location = "usuarios";
+			        	window.location = "usuarios";
 
-		        }
+			        }
 
 
-			});
+				});
 
-      	}
+	      	}
 
       }
 
@@ -197,56 +203,13 @@ $(".tablas").on("click", ".btnEliminarUsuario", function(){
 
   swal({
     title: '¿Está seguro de borrar el usuario?',
-    text: '¡Si no lo está puede cancelar la accíón!',
-    icon: 'warning',
-	buttons: true,
-	confirmButtonText: "Si, borrar usuario!",
-	cancelButtonText: "Cancelar",
-    dangerMode: true
-  })
-    .then((willDelete) => {
-      if (willDelete) {
-		window.location = "index.php?ruta=usuarios&idUsuario="+idUsuario+"&usuario="+usuario+"&fotoUsuario="+fotoUsuario;
-
-        /* swal('Ok, el usuario ha sido borrado!', {
-          icon: 'success',
-        }); */
-      } else {
-        swal('El usuario NO fue borrado!');
-      }
-    });
-
-//   swal({
-//     title: "",
-//     text: "",
-//     type: "",
-// 	showCancelButton: true,
-// 	confirmButtonClass: "btn-danger",
-// 	confirmButtonText: "Si, borrar usuario!",
-// 	cancelButtonText: "Cancelar",
-// 	closeOnConfirm: false,
-// 	closeOnCancel: false
-	
-	
-//   }),
-//   function(isConfirm){
-// 	  if(isConfirm){
-// 		  swal("Borrado","hhhh","success");
-// 	  }else{
-// 		  swal("Cancelado","ufff :)", "error");
-// 	  }
-//   };
-
-/*   swal({
-    title: '¿Está seguro de borrar el usuario?',
     text: "¡Si no lo está puede cancelar la accíón!",
     type: 'warning',
-	showCancelButton: true,
-	confirmButtonClass: "btn-danger",
+    showCancelButton: true,
     confirmButtonColor: '#3085d6',
-	cancelButtonColor: '#d33',
-	cancelButtonText: 'Cancelar',
-	confirmButtonText: 'Si, borrar usuario!'
+      cancelButtonColor: '#d33',
+      cancelButtonText: 'Cancelar',
+      confirmButtonText: 'Si, borrar usuario!'
   }).then(function(result){
 
     if(result.value){
@@ -257,8 +220,8 @@ $(".tablas").on("click", ".btnEliminarUsuario", function(){
 
   })
 
-}) */
-
-
 })
+
+
+
 
