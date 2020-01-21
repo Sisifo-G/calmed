@@ -46,7 +46,7 @@
                   </div>
                   <div class="card-body">
                     <div class="table-responsive">
-                      <table class="table table-bordered table-striped tablas">
+                      <table class="table table-bordered table-striped dt-responsive tablas">
                         <thead>
                         <tr>
                             <th style="width:10px">#</th>
