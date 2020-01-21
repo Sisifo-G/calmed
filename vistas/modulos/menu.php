@@ -10,26 +10,26 @@
     <ul class="sidebar-menu">
     <li class="menu-header">Principal</li>
     <li class="dropdown">
-        <a href="inicio" class="nav-link"><i class="fas fa-desktop"></i><span>Panel de Inicio</span></a>
+        <a href="inicio" class="nav-link" data-toggle="tooltip" data-placement="right" title="" data-original-title="Pulsar para ir a inicio" aria-describedby="tooltip204012"><i class="fas fa-desktop"></i><span>Panel de Inicio</span></a>
     </li>
     <li class="menu-header">Gestión de usuarios</li>
-    <li><a class="nav-link" href="usuarios"><i class="fas fa-user-friends"></i><span>Usuarios</span></a></li>
+    <li><a class="nav-link" href="usuarios" data-toggle="tooltip" data-placement="right" title="" data-original-title="Agregar, modificar o eliminar usuarios" aria-describedby="tooltip204012"><i class="fas fa-user-friends"></i><span>Usuarios</span></a></li>
     <!-- <li class="menu-header">Pages</li> -->
     <li class="menu-header">Varios</li>
 
     <li class="dropdown">
         <a href="correo" class="menu-toggle nav-link has-dropdown"><i class="fas fa-boxes"></i><span>Stock</span></a>
         <ul class="dropdown-menu">
-        <li><a class="nav-link" href="categorias">Categorías</a></li>
-        <li><a class="nav-link" href="productos">Productos</a></li>
+        <li><a class="nav-link" href="categorias" data-toggle="tooltip" data-placement="right" title="" data-original-title="Agregar, modificar o eliminar categoría" aria-describedby="tooltip204012">Categorías</a></li>
+        <li><a class="nav-link" href="productos" data-toggle="tooltip" data-placement="right" title="" data-original-title="Agregar, modificar o eliminar productos" aria-describedby="tooltip204012">Productos</a></li>
         </ul>
     </li>
 
-    <li><a class="nav-link" href="empleados"><i class="fas fa-hammer"></i><span>Empleados</span></a></li>
+    <li><a class="nav-link" href="empleados" data-toggle="tooltip" data-placement="right" title="" data-original-title="Agregar, modificar o eliminar registros de empleados" aria-describedby="tooltip204012"><i class="fas fa-hammer"></i><span>Empleados</span></a></li>
 
-    <li><a class="nav-link" href="clientes"><i class="fas fa-handshake"></i><span>Clientes</span></a></li>
+    <li><a class="nav-link" href="clientes" data-toggle="tooltip" data-placement="right" title="" data-original-title="Agregar, modificar o eliminar registros de clientes" aria-describedby="tooltip204012"><i class="fas fa-handshake"></i><span>Clientes</span></a></li>
 
-    <li><a class="nav-link" href="proveedores"><i class="fas fa-city"></i><span>Proveedores</span></a></li>
+    <li><a class="nav-link" href="proveedores" data-toggle="tooltip" data-placement="right" title="" data-original-title="Agregar, modificar o eliminar registros de proveedores" aria-describedby="tooltip204012"><i class="fas fa-city"></i><span>Proveedores</span></a></li>
     
     <li class="menu-header">Entradas y salidas</li>
     <li class="dropdown">

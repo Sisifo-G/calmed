@@ -234,9 +234,9 @@
 
 
 <!-- =================================================
-    MODAL EDITAR PRODUCTO
+    MODAL EDITAR CLIENTE
     ===================================================== -->
-    <div class="modal fade" id="modalEditarCliente" tabindex="-1" aria-labelledby="formModal" aria-hidden="true" role="dialog">
+<div class="modal fade" id="modalEditarCliente" tabindex="-1" aria-labelledby="formModal" aria-hidden="true" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -248,18 +248,15 @@
             <div class="modal-body">
                 <form role="form" method="post" enctype="multipart/form-data">
 
-
                     <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
-                                    <i class="fas fa-store"></i>
+                                    <i class="fas fa-user-tie"></i>
                                 </div>
                             </div>
-                            <select class="form-control input_lg" name="editarCategoria" readonly required>
-                                <option id="editarCategoria"></option>
-                                
-                            </select>
+                            <input type="text" class="form-control"name="editarCliente" id="editarCliente" required>
+                            <input type="hidden" id="idCliente" name="idCliente">
                         </div>
                     </div>
 
@@ -267,10 +264,10 @@
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
-                                    <i class="fas fa-code"></i>
+                                <i class="fas fa-id-card"></i>
                                 </div>
                             </div>
-                            <input type="text" class="form-control" id="editarCodigo" name="editarCodigo" readonly required>
+                            <input type="number" min="0" class="form-control" name="editarDocumentoId" id="editarDocumentoId">
                         </div>
                     </div>
 
@@ -278,21 +275,10 @@
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
-                                <i class="fas fa-box-open"></i>
+                                    <i class="fas fa-envelope"></i>
                                 </div>
                             </div>
-                            <input type="text" class="form-control" id="editarDescripcion" name="editarDescripcion" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">
-                                    <i class="fas fa-check-double"></i>
-                                </div>
-                            </div>
-                            <input type="number" class="form-control" name="editarStock" min="0" required>
+                            <input type="email" class="form-control" name="editarEmail" id="editarEmail">
                         </div>
                     </div>
 
@@ -301,10 +287,10 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">
-                                        <i class="fas fa-arrow-up"></i>
+                                        <i class="fas fa-phone"></i>
                                     </div>
                                 </div>
-                                <input type="number" class="form-control" id="editarPrecioCompra" name="editarPrecioCompra" step="any" min="0" required>
+                                <input type="text" class="form-control" name="editarTelefono" id="editarTelefono" data-inputmask="'mask':'(999) 999-9999'" data-mask>
                             </div>
                         </div>
                     </div>
@@ -314,52 +300,23 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">
-                                        <i class="fas fa-arrow-down"></i>
+                                        <i class="fas fa-map-marker-alt"></i>
                                     </div>
                                 </div>
-                                <input type="number" class="form-control" id="editarPrecioVenta" name="editarPrecioVenta" step="any" min="0" required>
+                                <input type="text" class="form-control" name="editarDireccion" id="editarDireccion">
                             </div>
                         </div>
                     </div>
 
 
-                    <div class="col-xs-6">
-                    
-                        <div class="form-group">
-                            <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input porcentaje" id="customCheck1" checked>
-                            <label class="custom-control-label" for="customCheck1">Utilizar porcentaje</label>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="input-group mb-2">
-                        <input type="number" class="form-control text-right nuevoPorcentaje" min="0" value="40" required>
-                        <div class="input-group-append">
-                          <div class="input-group-text"><i class="fa fa-percent"></i></div>
-                        </div>
-                    </div>
-
-                    
-
-                    
-                    
-                    <div class="form-group">
-                        <label>Imagen</label>
-                        <input type="file" class="form-control nuevaImagen" name="editarImagen">
-                        <p class="help-block">Peso máximo de la foto 2Mb</p>
-                        <img src="vistas/img/productos/default/anonymous.png" class="img-thumbnail previsualizar" width="100px">
-                        <input type="hidden" name="imagenActual" id="imagenActual">
-                    </div>
-                    
+                                                                  
                     
                     <button type="submit" class="btn btn-primary m-t-15 waves-effect">Guardar cambios</button>
 
                     <?php
 
-                        $editarProducto = new ControladorProductos();
-                        $editarProducto -> ctrEditarProducto();
+                        $editarCliente = new ControladorClientes();
+                        $editarCliente -> ctrEditarCliente();
 
                     ?>
 
@@ -370,9 +327,11 @@
 </div>
 
 
+
 <!-- =================================================
-    BORRAR PRODUCTO
+    BORRAR CLIENTE
     ===================================================== -->
+
 
 <?php
 

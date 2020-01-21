@@ -2,11 +2,8 @@
 <nav class="navbar navbar-expand-lg main-navbar sticky">
 <div class="form-inline mr-auto">
     <ul class="navbar-nav mr-3">
-    <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
-                            collapse-btn"> <i class="fas fa-align-justify"></i></a></li>
-    <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
-    <i class="fas fa-expand"></i>
-        </a></li>
+        <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg collapse-btn"><i class="fas fa-align-justify" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ocultar o mostrar el menú lateral" aria-describedby="tooltip204012"></i></a></li>
+        <li><a href="#" class="nav-link nav-link-lg fullscreen-btn"><i class="fas fa-expand" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Activar o desactivar el modo de pantalla completa" aria-describedby="tooltip204012"></i></a></li>
     <li>
         <form class="form-inline mr-auto">
         <div class="search-element">
@@ -134,7 +131,7 @@
     Menù Perfil de Usuario
     ==================================================================== -->
     <li class="dropdown">
-        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user" >
             <?php
 
                 if($_SESSION["foto"] != ""){
