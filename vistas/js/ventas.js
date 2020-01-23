@@ -21,11 +21,11 @@ $('.tablaVentas').DataTable( {
 	 "language": {
 
 			"sProcessing":     "Procesando...",
-			"sLengthMenu":     "Mostrar _MENU_ registros",
+			"sLengthMenu":     "Mostrar _MENU_ Productos",
 			"sZeroRecords":    "No se encontraron resultados",
 			"sEmptyTable":     "Ningún dato disponible en esta tabla",
-			"sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_",
-			"sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0",
+			"sInfo":           "Productos del _START_ al _END_ de un total de _TOTAL_",
+			"sInfoEmpty":      "Productos del 0 al 0 de un total de 0",
 			"sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
 			"sInfoPostFix":    "",
 			"sSearch":         "Buscar:",
@@ -97,25 +97,26 @@ $(".tablaVentas tbody").on("click", "button.agregarProducto", function(){
 
           	$(".nuevoProducto").append(
 
-          	'<div class="row" style="padding:5px 15px">'+
+				'<div class="form-row" style="padding:5px 5px">'+
 
 			  '<!-- Descripción del producto -->'+
 	          
-	          '<div class="col-xs-6" style="padding-right:0px">'+
+	          '<div class="col-md-5" style="padding-right:0px">'+
 	          
 	            '<div class="input-group">'+
 	              
-	              '<span class="input-group-addon"><button type="button" class="btn btn-danger btn-xs quitarProducto" idProducto="'+idProducto+'"><i class="fa fa-times"></i></button></span>'+
-
-	              '<input type="text" class="form-control nuevaDescripcionProducto" idProducto="'+idProducto+'" name="agregarProducto" value="'+descripcion+'" readonly required>'+
-
+				'<div class="input-group-prepend">'+
+				'<span class="input-group-text"><button type="button" class="btn btn-danger btn-xs quitarProducto" idProducto="'+idProducto+'"><i class="fa fa-times"></i></button></span>'+
+			'</div>'+
+			'<input type="text" class="form-control nuevaDescripcionProducto" idProducto="'+idProducto+'" name="agregarProducto" value="'+descripcion+'" readonly required>'+
+			
 	            '</div>'+
 
 	          '</div>'+
 
 	          '<!-- Cantidad del producto -->'+
 
-	          '<div class="col-xs-3">'+
+	          '<div class="col-md-2">'+
 	            
 	             '<input type="number" class="form-control nuevaCantidadProducto" name="nuevaCantidadProducto" min="1" value="1" stock="'+stock+'" nuevoStock="'+Number(stock-1)+'" required>'+
 
@@ -123,7 +124,7 @@ $(".tablaVentas tbody").on("click", "button.agregarProducto", function(){
 
 	          '<!-- Precio del producto -->'+
 
-	          '<div class="col-xs-3 ingresoPrecio" style="padding-left:0px">'+
+	          '<div class="col-md-5 ingresoPrecio" style="padding-left:0px">'+
 
 	            '<div class="input-group">'+
 
@@ -135,7 +136,35 @@ $(".tablaVentas tbody").on("click", "button.agregarProducto", function(){
 	             
 	          '</div>'+
 
-	        '</div>') 
+	        '</div>'
+
+
+
+				/* '<div class="form-group col-md-6" style="padding-right:0px">'+
+				'<label for="inputCity">Producto</label>'+
+
+				'<div class="input-group mb-2">'+
+					'<div class="input-group-prepend">'+
+						'<span class="input-group-text"><button type="button" class="btn btn-danger btn-xs quitarProducto" idProducto="'+idProducto+'"><i class="fa fa-times"></i></button></span>'+
+					'</div>'+
+					'<input type="text" class="form-control nuevaDescripcionProducto" idProducto="'+idProducto+'" name="agregarProducto" value="'+descripcion+'" readonly required>'+
+					
+					'</div>'+
+					
+					'</div>'+
+					'<div class="form-group col-md-2">'+
+						'<label for="inputState">Cantidad</label>'+
+						'<input type="number" class="form-control nuevaCantidadProducto" name="nuevaCantidadProducto" min="1" value="1" stock="'+stock+'" nuevoStock="'+Number(stock-1)+'" required>'+
+					'</div>'+
+					'<div class="form-group col-md-4 ingresoPrecio" style="padding-left:0px">'+
+						'<label for="inputZip">Valor</label>'+
+						'<div class="input-group mb-2">'+
+							'<div class="input-group-prepend">'+
+								'<span class="input-group-text">$</span>'+
+							'</div>'+
+							'<input type="text" class="form-control nuevoPrecioProducto" precioReal="'+precio+'" name="nuevoPrecioProducto" value="'+precio+'" readonly required>'+
+						'</div>'+
+					'</div>' */) 
 
 	        // SUMAR TOTAL DE PRECIOS
 
@@ -196,7 +225,7 @@ localStorage.removeItem("quitarProducto");
 
 $(".formularioVenta").on("click", "button.quitarProducto", function(){
 
-	$(this).parent().parent().parent().parent().remove();
+	$(this).parent().parent().parent().parent().parent().remove();
 
 	var idProducto = $(this).attr("idProducto");
 
@@ -273,11 +302,11 @@ $(".btnAgregarProducto").click(function(){
       	    
       	    	$(".nuevoProducto").append(
 
-          	'<div class="row" style="padding:5px 15px">'+
+          	'<div class="form-row" style="padding:5px 15px">'+
 
 			  '<!-- Descripción del producto -->'+
 	          
-	          '<div class="col-xs-6" style="padding-right:0px">'+
+	          '<div class="col-xs-5" style="padding-right:0px">'+
 	          
 	            '<div class="input-group">'+
 	              
@@ -295,7 +324,7 @@ $(".btnAgregarProducto").click(function(){
 
 	          '<!-- Cantidad del producto -->'+
 
-	          '<div class="col-xs-3 ingresoCantidad">'+
+	          '<div class="col-xs-2 ingresoCantidad">'+
 	            
 	             '<input type="number" class="form-control nuevaCantidadProducto" name="nuevaCantidadProducto" min="1" value="0" stock nuevoStock required>'+
 
@@ -303,7 +332,7 @@ $(".btnAgregarProducto").click(function(){
 
 	          '<!-- Precio del producto -->'+
 
-	          '<div class="col-xs-3 ingresoPrecio" style="padding-left:0px">'+
+	          '<div class="col-xs-5 ingresoPrecio" style="padding-left:0px">'+
 
 	            '<div class="input-group">'+
 
