@@ -70,10 +70,10 @@ $bloque1 = <<<EOF
 				<div style="font-size:8.5px; text-align:right; line-height:15px;">
 					
 					<br>
-					NIT: 71.759.963-9
+					NIT: 
 
 					<br>
-					Dirección: Calle 44B 92-11
+					Dirección: Vereda Palmito
 
 				</div>
 
@@ -84,10 +84,10 @@ $bloque1 = <<<EOF
 				<div style="font-size:8.5px; text-align:right; line-height:15px;">
 					
 					<br>
-					Teléfono: 300 786 52 49
+					Teléfono: 318 663 31 33
 					
 					<br>
-					ventas@inventorysystem.com
+					ventas@calmedina.com
 
 				</div>
 				

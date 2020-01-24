@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="vistas/assets/css/components.css">
   <!-- Custom style CSS -->
   <link rel="stylesheet" href="vistas/assets/css/custom.css">
+  <link rel="stylesheet" href="vistas/assets/bundles/bootstrap-daterangepicker/daterangepicker.css">
   <link rel='shortcut icon' type='image/x-icon' href='vistas/assets/img/favicon.ico' />
   <!--------------------------------- 
     PLUGINS
@@ -39,10 +40,13 @@
   <script src="vistas/plugins/sweetalert2/sweetalert2.all.js"></script>
    <!-- By default SweetAlert2 doesn't support IE. To enable IE 11 support, include Promise polyfill:-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+  
 
  <!-- iCheck 1.0.1 -->
   <script src="vistas/plugins/iCheck/icheck.min.js"></script>
 
+  <script src="vistas/assets/bundles/moment/min/moment.min.js"></script>
+  <script src="vistas/assets/bundles/bootstrap-daterangepicker/daterangepicker.js"></script>
   <!-- InputMask -->
   <script src="vistas/plugins/input-mask/jquery.inputmask.js"></script>
   <script src="vistas/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
@@ -50,6 +54,12 @@
 
   <!-- jQuery Number -->
   <script src="vistas/plugins/jqueryNumber/jquerynumber.min.js"></script>
+
+  <!-- Morris JS -->
+  <script src="vistas/assets/bundles/morris/morris.min.js"></script>
+  <script src="vistas/assets/bundles/morris/raphael-min.js"></script>
+  <!-- Page Specific JS File -->
+  <script src="vistas/assets/js/page/chart-morris.js"></script>
   
 
   
@@ -84,7 +94,7 @@
                 $_GET["ruta"]=="proveedores" ||
                 $_GET["ruta"]=="ventas" ||
                 $_GET["ruta"]=="crear-venta" ||
-                $_GET["ruta"]=="reporte-ventas" ||
+                $_GET["ruta"]=="reportes" ||
                 $_GET["ruta"]=="pago-prov" ||
                 $_GET["ruta"]=="pago-emp"  ||
                 $_GET["ruta"]=="salir"){

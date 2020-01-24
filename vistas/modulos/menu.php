@@ -37,7 +37,7 @@
         <ul class="dropdown-menu">
         <li><a class="nav-link" href="ventas"> Administrar ventas</a></li>
         <li><a class="nav-link" href="crear-venta"> Crear venta</a></li>
-        <li><a class="nav-link" href="reporte-ventas"> Reporte de ventas</a></li>
+        <li><a class="nav-link" href="reportes"> Reporte de ventas</a></li>
         </ul>
     </li>
     <li class="dropdown">
