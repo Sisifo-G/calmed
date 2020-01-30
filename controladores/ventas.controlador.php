@@ -592,4 +592,18 @@ class ControladorVentas{
 
 	}
 
+	/*=============================================
+	SUMA TOTAL VENTAS
+	=============================================*/
+
+	public function ctrSumaTotalStock(){
+
+		$tabla = "productos";
+
+		$respuesta = ModeloVentas::mdlSumaTotalStock($tabla);
+
+		return $respuesta;
+
+	}
+
 }

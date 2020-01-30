@@ -198,5 +198,23 @@ class ModeloVentas{
 
 	}
 
+	/*=============================================
+	SUMAR EL TOTAL STOCK
+	=============================================*/
+
+	static public function mdlSumaTotalStock($tabla){	
+
+		$stmt = Conexion::conectar()->prepare("SELECT SUM(stock) as total FROM $tabla");
+
+		$stmt -> execute();
+
+		return $stmt -> fetch();
+
+		$stmt -> close();
+
+		$stmt = null;
+
+	}
+
 	
 }

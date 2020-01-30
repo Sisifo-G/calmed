@@ -15,6 +15,8 @@ $totalClientes = count($clientes);
 $productos = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
 $totalProductos = count($productos);
 
+$stock = ControladorVentas::ctrSumaTotalStock();
+
 ?>
 
 <div class="row">
@@ -65,7 +67,7 @@ $totalProductos = count($productos);
           <h4 class="pull-right">Cal disponible</h4>
         </div>
         <div class="card-body pull-right">
-          500 Kg
+        <?php echo number_format($stock["total"]); ?> Bultos
         </div>
       </div>
       <div class="card-chart">
@@ -141,7 +143,7 @@ $totalProductos = count($productos);
     
     <div class="inner">
       
-      <h3>$<?php echo number_format($ventas["total"],2); ?></h3>
+      <h3>$<?php echo ($totalStock); ?></h3>
 
       <p>Ventas</p>
     

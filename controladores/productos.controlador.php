@@ -361,4 +361,19 @@ class ControladorProductos{
 	}
 
 
+	/*=============================================
+	MOSTRAR STOCK PRODUCTOS
+	=============================================*/
+
+	static public function ctrMostrarCalStock(){
+
+		$tabla = "productos";
+
+		$respuesta = ModeloProductos::mdlMostrarCalStock($tabla);
+
+		return $respuesta;
+
+	}
+
+
 }

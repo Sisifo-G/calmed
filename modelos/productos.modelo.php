@@ -167,4 +167,23 @@ class ModeloProductos{
 	}
 
 
+
+	/*=============================================
+	MOSTRAR TOTAL CAL
+	=============================================*/	
+
+	static public function mdlMostrarSumaStock($tabla){
+
+		$stmt = Conexion::conectar()->prepare("SELECT SUM(stock) as total FROM $productos");
+
+		$stmt -> execute();
+
+		return $stmt -> fetch();
+
+		$stmt -> close();
+
+		$stmt = null;
+	}
+
+
 }
