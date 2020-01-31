@@ -12,10 +12,12 @@ $totalCategorias = count($categorias);
 $clientes = ControladorClientes::ctrMostrarClientes($item, $valor);
 $totalClientes = count($clientes);
 
-$productos = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
+$productos = ControladorProductos::ctrMostrarSumaVentas($item, $valor, $orden);
 $totalProductos = count($productos);
 
 $stock = ControladorVentas::ctrSumaTotalStock();
+
+$pagos = ControladorPagos::ctrSumaTotalPagos($item, $valor, $orden);
 
 ?>
 
@@ -30,7 +32,7 @@ $stock = ControladorVentas::ctrSumaTotalStock();
           <h4 class="pull-right">Cal producida</h4>
         </div>
         <div class="card-body pull-right">
-          2000 Kg
+          <?php echo number_format($stock["total"]) + number_format($productos["total"]); ?> Bultos
         </div>
       </div>
       <div class="card-chart">
@@ -48,7 +50,7 @@ $stock = ControladorVentas::ctrSumaTotalStock();
           <h4 class="pull-right">Cal vendida</h4>
         </div>
         <div class="card-body pull-right">
-          1500 Kg
+          <?php echo number_format($productos["total"]); ?> Bultos
         </div>
       </div>
       <div class="card-chart">
@@ -88,7 +90,7 @@ $stock = ControladorVentas::ctrSumaTotalStock();
           <h4 class="pull-right">Pagos efectuados</h4>
         </div>
         <div class="card-body pull-right">
-          $1200000
+          $ <?php echo number_format($pagos["total"]); ?>
         </div>
       </div>
       <div class="card-chart">
@@ -125,7 +127,7 @@ $stock = ControladorVentas::ctrSumaTotalStock();
           <h4 class="pull-right">Ingresos</h4>
         </div>
         <div class="card-body pull-right">
-          $
+          $ <?php echo number_format($ventas["total"] - $pagos["total"]); ?>
         </div>
       </div>
       <div class="card-chart">

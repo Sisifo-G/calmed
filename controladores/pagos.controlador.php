@@ -333,7 +333,7 @@ class ControladorPagos{
 
 		$tabla = "pago_prov";
 
-		$respuesta = ModeloPagos::mdlSumaTotalPagos($tabla);
+		$respuesta = ModeloPagos::mdlSumaPagos($tabla);
 
 		return $respuesta;
 
