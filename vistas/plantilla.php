@@ -132,6 +132,7 @@
   <script src="vistas/js/empleados.js"></script>
   <script src="vistas/js/proveedores.js"></script>
   <script src="vistas/js/ventas.js"></script>
+  <script src="vistas/js/pagos.js"></script>
   <script src="vistas/js/reportes.js"></script>
 
 </body>

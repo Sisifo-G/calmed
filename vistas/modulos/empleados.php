@@ -55,11 +55,7 @@
                           <th>Documento ID</th>
                           <th>Email</th>
                           <th>Teléfono</th>
-                          <th>Dirección</th>
-                         
-                          <th>Total compras</th>
-                          <th>Última compra</th>
-                          
+                          <th>Dirección</th>                        
                           <th>Acciones</th>
 
                         </tr>  
@@ -91,10 +87,6 @@
                                       <td>'.$value["direccion"].'</td>
 
                                                  
-
-                                      <td>'.$value["pagos"].'</td>
-
-                                      <td>'.$value["ultimo_pago"].'</td>
 
                                       
 

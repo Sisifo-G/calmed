@@ -56,10 +56,6 @@
                           <th>Email</th>
                           <th>Teléfono</th>
                           <th>Dirección</th>
-                         
-                          <th>Total pagos</th>
-                          <th>Último pago</th>
-                          
                           <th>Acciones</th>
 
                         </tr>  
@@ -89,14 +85,6 @@
                                       <td>'.$value["telefono"].'</td>
 
                                       <td>'.$value["direccion"].'</td>
-
-                                                 
-
-                                      <td>'.$value["pagos"].'</td>
-
-                                      <td>'.$value["ultimo_pago"].'</td>
-
-                                      
 
                                       <td>
 
